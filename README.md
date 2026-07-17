@@ -1,194 +1,124 @@
-# 🤖 AI Visitor Management System using AWS Rekognition and Polly
+# 🤖 AI Visitor Management System
 
-<div align="center">
+<p align="center">
+  Intelligent Visitor Registration with Facial Recognition and Voice Greeting
+</p>
 
-![AWS](https://img.shields.io/badge/AWS-Cloud-orange?style=for-the-badge&logo=amazonaws)
-![Lambda](https://img.shields.io/badge/AWS-Lambda-FF9900?style=for-the-badge&logo=awslambda)
-![S3](https://img.shields.io/badge/Amazon-S3-569A31?style=for-the-badge&logo=amazons3)
-![DynamoDB](https://img.shields.io/badge/Amazon-DynamoDB-4053D6?style=for-the-badge&logo=amazondynamodb)
-![API Gateway](https://img.shields.io/badge/API-Gateway-FF4F8B?style=for-the-badge&logo=amazonapigateway)
-![Rekognition](https://img.shields.io/badge/Amazon-Rekognition-232F3E?style=for-the-badge)
-![Polly](https://img.shields.io/badge/Amazon-Polly-00A1C9?style=for-the-badge)
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript)
-
-# AI Visitor Management System
-
-### 🚀 AI Powered Visitor Registration using AWS Cloud Services
-
-*An intelligent serverless visitor management platform that uses facial recognition and AI-generated voice greetings to automate visitor registration.*
-
-</div>
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.x-blue?style=for-the-badge&logo=python">
+  <img src="https://img.shields.io/badge/HTML-5-orange?style=for-the-badge&logo=html5">
+  <img src="https://img.shields.io/badge/CSS-3-blue?style=for-the-badge&logo=css3">
+  <img src="https://img.shields.io/badge/JavaScript-ES6-yellow?style=for-the-badge&logo=javascript">
+</p>
 
 ---
 
-# 📌 Project Overview
+## 📖 Overview
 
-The **AI Visitor Management System** is a serverless cloud application developed using multiple AWS services to automate visitor registration and identity verification.
+AI Visitor Management System is a cloud-native visitor registration platform that combines facial recognition and voice synthesis to automate visitor onboarding and verification.
 
-The system allows visitors to:
-
-✅ Register using a web-based form  
-✅ Upload their photograph  
-✅ Detect faces using Amazon Rekognition  
-✅ Generate personalized voice greetings using Amazon Polly  
-✅ Store images in Amazon S3  
-✅ Save visitor information in DynamoDB  
-✅ Process requests through API Gateway and Lambda  
-
-This project demonstrates the integration of **Artificial Intelligence services with Serverless AWS Architecture**.
+The system captures visitor information, verifies faces, generates personalized greetings, stores media files, and maintains visitor records in real time.
 
 ---
 
-# 🏗️ Architecture Diagram
+## ✨ Key Features
+
+- Visitor Registration Portal
+- Photo Upload Support
+- Facial Recognition
+- Confidence Score Detection
+- Personalized Voice Greeting
+- Image Storage
+- Visitor History Tracking
+- Real-Time Processing
+- Monitoring and Logging
+
+---
+
+## 🏗 System Architecture
 
 ```text
-┌────────────────────┐
-│   Visitor Browser  │
-│ HTML • CSS • JS    │
-└─────────┬──────────┘
-          │
-          ▼
-┌────────────────────┐
-│  Amazon API Gateway│
-└─────────┬──────────┘
-          │
-          ▼
-┌────────────────────┐
-│    AWS Lambda      │
-│ Python Backend     │
-└─────┬────┬────┬────┘
-      │    │    │
-      ▼    ▼    ▼
-   Amazon Amazon Amazon
-     S3   Polly Rekognition
-      │
-      ▼
-┌────────────────────┐
-│   Amazon DynamoDB  │
-└────────────────────┘
-
-                │
-                ▼
-        Amazon CloudWatch
+Visitor
+   │
+   ▼
+Frontend Application
+   │
+   ▼
+API Endpoint
+   │
+   ▼
+Backend Processing
+ ┌──────┬────────┬─────────┐
+ ▼      ▼        ▼         ▼
+Storage Face   Voice    Database
+       Detection Greeting
 ```
 
 ---
 
-# ⚙️ AWS Services Used
+## ☁️ Cloud Components
 
-| AWS Service | Purpose |
-|------------|---------|
-| Amazon S3 | Stores visitor images and generated audio files |
-| AWS Lambda | Executes backend business logic |
-| API Gateway | Provides REST API endpoints |
-| Amazon DynamoDB | Stores visitor records |
-| Amazon Rekognition | Detects and analyzes visitor faces |
-| Amazon Polly | Generates AI voice greetings |
-| AWS IAM | Manages permissions and security |
-| Amazon CloudWatch | Logs and monitoring |
-
----
-
-# ✨ Features
-
-### 👤 Visitor Registration
-- Visitor Name
-- Email Address
-- Mobile Number
-- Purpose of Visit
-- Department Selection
-- Host Employee Name
-- Photo Upload
-
-### 🤖 AI Features
-- Face Detection
-- Face Confidence Score
-- AI Generated Voice Greeting
-- Automatic Image Storage
-- Automatic Visitor Record Creation
-
-### ☁️ Cloud Features
-- Serverless Architecture
-- Fully Managed Backend
-- Secure Object Storage
-- No Server Maintenance
-- Real-Time Processing
+| Component | Purpose |
+|----------|---------|
+| Storage Service | Store visitor images and audio |
+| Compute Service | Process visitor registration |
+| Database Service | Store visitor records |
+| Face Recognition | Detect and verify faces |
+| Speech Synthesis | Generate greeting audio |
+| Monitoring | Application logs and metrics |
+| Identity Management | Access control |
 
 ---
 
-# 🖥️ Technology Stack
+## 🔄 Workflow
 
-## Frontend
-- HTML5
-- CSS3
-- JavaScript
-- Live Server
-
-## Backend
-- Python 3.x
-- AWS Lambda
-- REST API
-
-## Database
-- Amazon DynamoDB
-
-## AI Services
-- Amazon Rekognition
-- Amazon Polly
+1. Visitor fills the registration form.
+2. Visitor uploads an image.
+3. Backend processes the request.
+4. Face is detected and analyzed.
+5. Greeting audio is generated.
+6. Media files are stored.
+7. Visitor record is saved.
+8. Response is returned to the user.
 
 ---
 
-# 📸 Project Screenshots
+## 📸 Screenshots
 
-## 📝 Visitor Registration Form
+### Registration Form
 
 ![Form](https://github.com/user-attachments/assets/ff97c378-d45a-4af6-ae9f-4bf6544eb865)
 
 ---
 
-## ✅ Successful Registration Result
+### Registration Result
 
 ![Result](https://github.com/user-attachments/assets/09e6b19b-0725-4b19-a766-4e475f733821)
 
 ---
 
-## 🗄️ DynamoDB Visitor Records
+### Visitor Database
 
-![DynamoDB](https://github.com/user-attachments/assets/f2c3e98e-049e-4c1a-aef8-c1d0c377daa5)
-
----
-
-## ☁️ Amazon S3 Storage
-
-![S3](https://github.com/user-attachments/assets/6cdced10-ed01-4b82-936e-74de7f60198f)
+![Database](https://github.com/user-attachments/assets/f2c3e98e-049e-4c1a-aef8-c1d0c377daa5)
 
 ---
 
-## ⚡ AWS Lambda Backend
+### Storage
+
+![Storage](https://github.com/user-attachments/assets/6cdced10-ed01-4b82-936e-74de7f60198f)
+
+---
+
+### Backend Processing
 
 ![Lambda](https://github.com/user-attachments/assets/7e4d51e0-0074-4870-a381-5325564e44f9)
 
 ---
 
-# 🔄 Workflow
-
-1. Visitor enters details in the web form.
-2. Image is converted to Base64 using JavaScript.
-3. API Gateway receives the request.
-4. Lambda processes visitor information.
-5. Rekognition detects the visitor's face.
-6. Polly generates a personalized greeting audio.
-7. Images and audio are stored in Amazon S3.
-8. Visitor information is saved in DynamoDB.
-9. CloudWatch logs all activities.
-
----
-
-# 📂 Repository Structure
+## 📂 Project Structure
 
 ```text
-aws-ai-visitor-management-system
+aws-ai-visitor-management-system/
 │
 ├── index.html
 ├── style.css
@@ -199,41 +129,25 @@ aws-ai-visitor-management-system
 
 ---
 
-# 📈 Project Outcomes
+## 🎯 Skills Demonstrated
 
-✔ Successfully implemented serverless architecture.  
-✔ Integrated AWS AI services into a real-world application.  
-✔ Achieved automated visitor registration and verification.  
-✔ Demonstrated cloud-native application development skills.
-
----
-
-# 🎯 Learning Outcomes
-
-- AWS Serverless Computing
+- Serverless Architecture
 - REST API Development
+- Event Driven Processing
+- NoSQL Databases
 - Object Storage
-- NoSQL Database Design
-- AI Service Integration
-- Cloud Security with IAM
-- Monitoring using CloudWatch
+- Facial Recognition
+- Speech Synthesis
+- Monitoring and Logging
 
 ---
 
-# 👨‍💻 Author
+## 👨‍💻 Author
 
-## Bhavesh Dinesh Patil
+**Bhavesh Patil**
 
-### AWS Cloud Enthusiast | Cloud Engineer Aspirant | AI & ML Student
-
-- GitHub: https://github.com/Bhavesh2005patil
+GitHub: https://github.com/Bhavesh2005patil
 
 ---
 
-<div align="center">
-
-## ⭐ If you like this project, give it a star!
-
-### Built with ❤️ using AWS Cloud Services
-
-</div>
+⭐ If you found this project useful, consider giving it a star.
