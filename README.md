@@ -1,172 +1,121 @@
 # 🤖 AI Visitor Management System
 
-<div align="center">
+<p align="center">
+  Intelligent Visitor Registration with Facial Recognition and Voice Greeting
+</p>
 
-![Lambda](https://img.shields.io/badge/Lambda-FF9900?style=for-the-badge&logo=awslambda&logoColor=white)
-![S3](https://img.shields.io/badge/S3-569A31?style=for-the-badge&logo=amazons3&logoColor=white)
-![DynamoDB](https://img.shields.io/badge/DynamoDB-4053D6?style=for-the-badge&logo=amazondynamodb&logoColor=white)
-![API Gateway](https://img.shields.io/badge/API_Gateway-FF4F8B?style=for-the-badge)
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-
-### 🚀 Intelligent Visitor Registration with Facial Recognition and Voice Greeting
-
-*An AI-powered serverless platform that automates visitor registration using facial recognition, voice synthesis, cloud storage, and real-time data processing.*
-
-</div>
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.x-blue?style=for-the-badge&logo=python">
+  <img src="https://img.shields.io/badge/HTML-5-orange?style=for-the-badge&logo=html5">
+  <img src="https://img.shields.io/badge/CSS-3-blue?style=for-the-badge&logo=css3">
+  <img src="https://img.shields.io/badge/JavaScript-ES6-yellow?style=for-the-badge&logo=javascript">
+</p>
 
 ---
 
-# 📌 Project Overview
+## 📖 Overview
 
-The AI Visitor Management System is a modern cloud-based application that automates visitor registration and identity verification.
+AI Visitor Management System is a cloud-native visitor registration platform that combines facial recognition and voice synthesis to automate visitor onboarding and verification.
 
-The platform enables visitors to register through a web interface, upload their photograph, detect faces automatically, generate personalized voice greetings, store visitor records securely, and maintain a complete visitor history.
-
-The project demonstrates the integration of Artificial Intelligence services with Serverless Architecture and real-time cloud processing.
+The system captures visitor information, verifies faces, generates personalized greetings, stores media files, and maintains visitor records in real time.
 
 ---
 
-# ✨ Features
+## ✨ Key Features
 
-## 👤 Visitor Registration
-- Visitor Name
-- Email Address
-- Mobile Number
-- Purpose of Visit
-- Department Selection
-- Host Name
-- Photo Upload
-
-## 🤖 AI Features
-- Automatic Face Detection
-- Face Confidence Score
+- Visitor Registration Portal
+- Photo Upload Support
+- Facial Recognition
+- Confidence Score Detection
 - Personalized Voice Greeting
-- Real-Time Image Processing
-- Secure Visitor Verification
-
-## ☁️ Cloud Features
-- Serverless Architecture
-- Object Storage
-- NoSQL Database
-- REST API Communication
+- Image Storage
+- Visitor History Tracking
+- Real-Time Processing
 - Monitoring and Logging
 
 ---
 
-# 🏗 Architecture
+## 🏗 System Architecture
 
 ```text
-┌───────────────────────────┐
-│     Visitor Browser       │
-│   HTML • CSS • JS         │
-└─────────────┬─────────────┘
-              │
-              ▼
-┌───────────────────────────┐
-│        API Gateway        │
-└─────────────┬─────────────┘
-              │
-              ▼
-┌───────────────────────────┐
-│          Lambda           │
-│      Python Backend       │
-└───────┬────────┬──────────┘
-        │        │
-        ▼        ▼
-   Face Detection Voice Greeting
-        │        │
-        ▼        ▼
-      Storage   Database
-
-              ▼
-        Monitoring Logs
+Visitor
+   │
+   ▼
+Frontend Application
+   │
+   ▼
+API Endpoint
+   │
+   ▼
+Backend Processing
+ ┌──────┬────────┬─────────┐
+ ▼      ▼        ▼         ▼
+Storage Face   Voice    Database
+       Detection Greeting
 ```
 
 ---
 
-# ☁️ Cloud Services Used
+## ☁️ Cloud Components
 
-| Service | Purpose |
+| Component | Purpose |
 |----------|---------|
-| S3 | Stores visitor images and generated audio |
-| Lambda | Executes backend logic |
-| API Gateway | Handles API requests |
-| DynamoDB | Stores visitor records |
-| Rekognition | Detects visitor faces |
-| Polly | Generates voice greetings |
-| IAM | Security and permissions |
-| CloudWatch | Monitoring and logs |
+| Storage Service | Store visitor images and audio |
+| Compute Service | Process visitor registration |
+| Database Service | Store visitor records |
+| Face Recognition | Detect and verify faces |
+| Speech Synthesis | Generate greeting audio |
+| Monitoring | Application logs and metrics |
+| Identity Management | Access control |
 
 ---
 
-# 🔄 Workflow
+## 🔄 Workflow
 
-1. Visitor fills out the registration form.
-2. Image is converted into Base64 format using JavaScript.
-3. API Gateway receives the request.
-4. Lambda processes visitor information.
-5. Face detection service analyzes the uploaded image.
-6. Voice greeting service generates personalized audio.
-7. Images and audio files are stored securely.
-8. Visitor records are saved in the database.
-9. Logs are generated for monitoring and debugging.
-
----
-
-# 💻 Technology Stack
-
-## Frontend
-- HTML5
-- CSS3
-- JavaScript
-
-## Backend
-- Python
-- Serverless Functions
-
-## Database
-- DynamoDB
-
-## AI Services
-- Face Detection
-- Voice Synthesis
+1. Visitor fills the registration form.
+2. Visitor uploads an image.
+3. Backend processes the request.
+4. Face is detected and analyzed.
+5. Greeting audio is generated.
+6. Media files are stored.
+7. Visitor record is saved.
+8. Response is returned to the user.
 
 ---
 
-# 📸 Project Screenshots
+## 📸 Screenshots
 
-## 📝 Visitor Registration Form
+### Registration Form
 
-![Visitor Form](https://github.com/user-attachments/assets/ff97c378-d45a-4af6-ae9f-4bf6544eb865)
+![Form](https://github.com/user-attachments/assets/ff97c378-d45a-4af6-ae9f-4bf6544eb865)
 
 ---
 
-## ✅ Registration Successful
+### Registration Result
 
 ![Result](https://github.com/user-attachments/assets/09e6b19b-0725-4b19-a766-4e475f733821)
 
 ---
 
-## 🗄 Database Records
+### Visitor Database
 
 ![Database](https://github.com/user-attachments/assets/f2c3e98e-049e-4c1a-aef8-c1d0c377daa5)
 
 ---
 
-## ☁️ Object Storage
+### Storage
 
 ![Storage](https://github.com/user-attachments/assets/6cdced10-ed01-4b82-936e-74de7f60198f)
 
 ---
 
-## ⚡ Backend Function
+### Backend Processing
 
 ![Lambda](https://github.com/user-attachments/assets/7e4d51e0-0074-4870-a381-5325564e44f9)
 
 ---
 
-# 📂 Repository Structure
+## 📂 Project Structure
 
 ```text
 aws-ai-visitor-management-system/
@@ -180,45 +129,25 @@ aws-ai-visitor-management-system/
 
 ---
 
-# 🎯 Learning Outcomes
+## 🎯 Skills Demonstrated
 
-- Serverless Computing
+- Serverless Architecture
 - REST API Development
+- Event Driven Processing
+- NoSQL Databases
 - Object Storage
-- NoSQL Database Design
-- AI Service Integration
-- Access Management
+- Facial Recognition
+- Speech Synthesis
 - Monitoring and Logging
 
 ---
 
-# 📈 Project Highlights
+## 👨‍💻 Author
 
-✅ Real-Time Visitor Registration  
-✅ AI-Based Face Detection  
-✅ Personalized Voice Greeting  
-✅ Secure Cloud Storage  
-✅ Serverless Backend Architecture  
-✅ Fully Managed Infrastructure  
-✅ Event Driven Processing  
-✅ Production Ready Design  
-
----
-
-# 👨‍💻 Author
-
-## Bhavesh Patil
-
-Cloud Enthusiast • Developer • AI & ML Student
+**Bhavesh Patil**
 
 GitHub: https://github.com/Bhavesh2005patil
 
 ---
 
-<div align="center">
-
-## ⭐ If you found this project useful, consider giving it a star.
-
-### Built with ❤️ using Serverless Cloud Technologies
-
-</div>
+⭐ If you found this project useful, consider giving it a star.
